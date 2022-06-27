@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+
+    <link rel="stylesheet" href="javascript.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <!-- Inclusão do jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- Inclusão do Plugin jQuery Máscara-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+</head>
+<body>
+    <form action="" method="POST">
+        <div>
+            <p>Cadastro do Cliente</p>
+            <div>
+                <label for="nome" id="l_nome">Nome Completo</label>
+                <input type="text" id="i_nome" placeholder="Insira o nome completo" class="width: 100px">
+            
+                <label for="celular" id="l_data_nasc">Data de nascimento</label>
+                <input type="text" id="data_nasc" placeholder="Data de nascimento">
+            </div>
+    
+            <div>
+                <label for="rg" id="l_rg">RG</label>
+                <input type="text" id="RG" placeholder="99.999.999-0">
+    
+                <label for="cpf" id="l_cpf">CPF</label>
+                <input type="text" id="CPF" placeholder="999.999.999-00">
+            </div>
+    
+            <div>
+                <label for="email" id="l_email">Email</label>
+                <input type="text" id="i_email" placeholder="example@example.com">
+    
+                <label for="celular" id="l_celular">Celular</label>
+                <input type="text" id="celular" placeholder="Insira o número do celular">
+            </div>
+
+            <div id="box_residencial">
+                <p>Endereço Residencial</p>
+                <div>
+                    <label for="cep" id="l_cep">CEP</label>
+                    <input type="text" id="CEP" placeholder="99-999-999">
+    
+                    <label for="rua" id="l_rua">Rua</label>
+                    <input type="text" id="res_rua" placeholder="Digite o nome da rua">
+                </div>
+
+                <div>
+                    <label for="numero" id="l_numero">Número</label>
+                    <input type="text" id="res_numero" placeholder="Número">
+        
+                    <label for="rua" id="l_rua">Bairro</label>
+                    <input type="text" id="res_bairro" placeholder="Digite o bairro">
+                </div>
+
+                <div>
+                    <label for="cidade" id="l_cidade">Cidade</label>
+                    <input type="text" id="res_cidade" placeholder="Digite a cidade">
+
+                    <label for="estado" id="l_estado">Estado</label>
+                    <input type="text" id="res_estado" placeholder="Digite o estado">
+                </div>
+            </div>
+
+            <div id="box_obra">
+                <p>Endereço da Obra</p>
+                <div>
+                    <label for="cep" id="l_cep">CEP</label>
+                    <input type="text" id="obra_CEP" placeholder="99-999-999">
+    
+                    <label for="rua" id="l_rua">Rua</label>
+                    <input type="text" id="obra_rua" placeholder="Digite o nome da rua">
+                </div>
+
+                <div>
+                    <label for="numero" id="l_numero">Número</label>
+                    <input type="text" id="obra_numero" placeholder="Número">
+        
+                    <label for="rua" id="l_rua">Bairro</label>
+                    <input type="text" id="obra_bairro" placeholder="Digite o bairro">
+                </div>
+
+                <div>
+                    <label for="cidade" id="l_cidade">Cidade</label>
+                    <input type="text" id="obra_cidade" placeholder="Digite a cidade">
+
+                    <label for="estado" id="l_estado">Estado</label>
+                    <input type="text" id="obra_estado" placeholder="Digite o estado">
+                </div>
+                <div>
+                    <label for="referencia" id="l_referencia">Ponto de referência</label>
+                    <input type="text" id="referencia" placeholder="Digite um pono de referência">
+                </div>
+            </div>
+        </div>
+
+        
+        <div>
+            <input type="submit" id="cadastrar" value="Cadastrar" class="btn btn-primary" onclick="cadastrar()">
+        </div>
+        
+    </form>
+</body>
+
+
+
+
+<script> //mascaras
+
+    jQuery(function($){
+    $("#celular").mask("(99) 9999-9999");
+    $("#CPF").mask("999.999.999-99");
+    $("#RG").mask("99.999.999-9");
+    $("#data_nasc").mask("99/99/9999");
+    $("#CEP").mask("99-999-999")
+    $("#obra_CEP").mask("99-999-999")
+    });
+</script>
+
+
+
+<style type="text/css">
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+</style>
+
+
+</html>

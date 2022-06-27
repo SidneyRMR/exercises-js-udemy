@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovação de Aluguel de Containers</title>
+
+    <link rel="javascript" href="javascript.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+</head>
+<body>
+    <div>
+
+        <h1>Renovação de aluguel</h1>
+        <div>
+            <div>
+                <div>
+                    <div>Selecione o cliente
+                    <select name="" id="selectCliente">
+                        <option value="Marcos">Marcos</option>
+                        <option value="Marcio">Marcio</option>
+                        <option value="Samuel">Samuel</option>
+                        <option value="Bruno">Bruno</option>
+                        <option value="Alice">Alice</option>
+                    </select>
+                    <div>Selecione a quantidade de dias
+                    <select name="" id="selectDias">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+
+                </div>
+
+                <input type="button" name="" id="btn-renovar" value="Clique para renovar" onclick="renovar()">
+
+            </div>
+           
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+
+    function renovar(){
+        let selectCliente = document.getElementById('selectCliente')
+        let selectDias = document.getElementById('selectDias')
+        alert(`Aluguel renovado por mais ${selectDias.value} dias para o cliente ${selectCliente.value} com sucesso!`)
+        window.location.href = 'tela-inicial.html'
+
+
+
+    }
+
+</script>
+
+<style type="text/css">
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    </style>
+
+</html>

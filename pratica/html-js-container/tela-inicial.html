@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela inicial</title>
+
+    <link rel="javascript" href="javascript.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+</head>
+<body>
+    <div>
+        <h1>Controle de aluguel de containers</h1>
+        <div>
+            <label for="perquisar">Pesquisar cliente</label>
+            <input 
+                type="text"
+                id="pesquisar"
+                placeholder="Nome do cliente">
+                <input type="submit" id="btn_pesquisar" 
+                       value="Pesquisar"
+                    >
+
+        </div>
+        <div style="margin: 10px;">
+            <input  type="submit" id="btn_novo_cliente" 
+                    value="Cadastrar novo cliente" 
+                    onclick = "window.location.href = 'cliente-novo.html'">
+
+            <input type="button" id="btn_devolver" 
+                    value="Devolver container"
+                    onclick = "window.location.href = 'devolução-container.html'">
+
+            <input type="button" id="btn_renovar" 
+                    value="Renovar aluguel"
+                    onclick = "window.location.href = 'renovar-container.html'">
+
+        </div>
+            <div type="text" id="marcos" value="" readonly></div>
+            <div type="text" id="marcio" value="" readonly></div>
+            <div type="text" id="samuel" value="" readonly></div>
+            <div type="text" id="bruno" value="" readonly></div>
+            <div type="text" id="alice" value="" readonly></div>
+    </div>
+</body>
+<script>
+
+// fetch("./dados.json")
+// .then(response => {
+//    return response.json();
+// })
+// .then(jsondata => console.log(jsondata));
+
+document.getElementById('btn_pesquisar').addEventListener('click', function(){
+    //a variavel nomeCliente recebe o valor digitado 
+    //e será usada para pesquisar este valor no banco de dados
+    
+    marcos.innerHTML = ('Marcos')
+    marcio.innerHTML = ('Marcio')
+    samuel.innerHTML = ('Samuel')
+    bruno.innerHTML = ('Bruno')
+    alice.innerHTML = ('Alice')
+
+})
+
+</script>
+<style>
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+</style>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolver Container</title>
+
+    <link rel="javascript" href="javascript.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+</head>
+<body>
+    <div>
+        <h1>Devolução de containers</h1>
+        <div>Selecione o container e clique no botão para devolver</div>
+        <div>
+            <div>
+                <select name="" id="selectContainer">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                </select>
+                <input type="button" name="" id="btn-devolver" value="Clique para devolver" onclick="devolver()">
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function devolver(){
+        let selectContainer = document.getElementById('selectContainer')
+        alert(`Container ${selectContainer.value} devolvido com sucesso!`)
+        window.location.href = 'tela-inicial.html'
+
+
+
+    }
+
+</script>
+
+<style type="text/css">
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    </style>
+    
+</html>
