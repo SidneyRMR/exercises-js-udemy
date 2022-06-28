@@ -3,7 +3,7 @@
 
 let a = 3
 let b = -5
-let c = 12
+let c = -12
 
 let delta = Math.pow(b, 2) - (4 * a * c)
 

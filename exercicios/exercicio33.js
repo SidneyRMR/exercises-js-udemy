@@ -4,25 +4,28 @@
  * Mostrar resultado na tela, todos os elementos dos vetores devem aparecer na tela.
 */
 
-vetorInteiro = [10,20,30,40]
-vertorString = ['ola', 'eu', 'sou', 'programador']
-vetorDouble = [10.5, 15.6, 14,9, 17,3]
-
-let somaLength = vetorInteiro + vertorString + vetorDouble
+let vetorInteiro = [10,20,30,40]
+let vetorString = ['ola', 'eu', 'sou', 'programador']
+let vetorDouble = [10.5, 15.6, 14,9, 17,3]
 
 function somaVetores1(){
-    aux = vetorInteiro
-    aux.push(vertorString)
-    aux.push(vetorDouble)
-    //aux.push(vetorInteiro)
-    //resultadoSomaVetores = vetorInteiro + vertorString + vetorDouble
+    let aux = []
+    aux = vetorInteiro.concat(vetorString)
+    aux = aux.concat(vetorDouble)
+    return aux
 }
 
-function concat(){
-    somaDeVetoresDiferentes1 = somaVetores1()
-    console.log(somaLength)
-    console.log('\n',aux)
+function somaVetores2(){
+    let aux = []
+    aux = String.prototype.concat(vetorInteiro, ',', vetorString,',', vetorDouble)
+    aux = aux.split(',')
+    return aux
+}
+
+function Main(){
+    console.log(somaVetores1())
+    console.log(somaVetores2())
 }
 
 
-concat()
+Main()
